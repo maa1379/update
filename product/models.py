@@ -11,7 +11,6 @@ class ProductBaseModel(models.Model):
     # height = models.PositiveIntegerField()
     # width = models.PositiveIntegerField()
     # length = models.PositiveIntegerField()
-
     # level=models.CharField(max_length=125)
     created=models.DateField()
     added=models.DateField(auto_now_add=True)
