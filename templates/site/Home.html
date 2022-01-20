@@ -1,0 +1,742 @@
+{% extends "site/base.html" %}
+{% load static %}
+
+                    {% block search %}
+                    <!-- Quik search -->
+                    <div class="dez-quik-search ">
+                        <form action="#" style="margin: auto;margin-top: 20px">
+                            <div class="row ">
+                                <div class="col-4 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="نوع سنگ"
+                                           type="text"
+                                           style="background-color: #ffffffc4;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #e3e3e3;"/>
+                                </div>
+                                <div class="col-4 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="نام سنگ"
+                                           type="text"
+                                           style="background-color: #ffffffc4;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #e3e3e3;"/>
+                                </div>
+                                <div class="col-2 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="رنگ"
+                                           type="text"
+                                           style="background-color: #ffffffc4;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #e3e3e3;"/>
+                                </div>
+                                <div class="col-2 form-group text-left">
+                                    <span id="quik-search-remove"><i class="fa fa-remove"></i></span>
+                                </div>
+
+                            </div>
+                            <div class="row " style="margin-top: -10px">
+                                <div class="col-3 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="حداقل طول"
+                                           type="text"
+                                           style="background-color: #ffffff5c;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #c5c5c5;"/>
+                                </div>
+                                <div class="col-3 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="حداکثر طول"
+                                           type="text"
+                                           style="background-color: #ffffff5c;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #c5c5c5;"/>
+                                </div>
+                                <div class="col-2 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="حداقل ارتفاع"
+                                           type="text"
+                                           style="background-color: #ffffff5c;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #c5c5c5;"/>
+                                </div>
+                                <div class="col-2 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="حداکثر ارتفاع"
+                                           type="text"
+                                           style="background-color: #ffffff5c;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #c5c5c5;"/>
+                                </div>
+                                <div class="col-2 form-group text-left">
+                                    <button class="site-button dz-xs-flex m-r5"
+                                            style="background-color: #1A74B5; width: 100%">
+                                        جستجو
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="row " style="margin-top: -10px">
+                                <div class="col-3 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="محل دپو"
+                                           type="text"
+                                           style="background-color: #ffffffc4;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #e3e3e3;"/>
+                                </div>
+                                <div class="col-4 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="تناژ مورد نیاز"
+                                           type="text"
+                                           style="background-color: #ffffff5c;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #c5c5c5;"/>
+                                </div>
+                                <div class="col-3 form-group text-left">
+                                    <input name="dzName" required="" class="form-control " placeholder="درجه بندی"
+                                           type="text"
+                                           style="background-color: #ffffffc4;height: 35px; font-size: 12px;box-shadow: 1px 1px 5px 1px #e3e3e3;"/>
+                                </div>
+                                <div class="col-2 form-group text-left">
+                                    <button class="site-button dz-xs-flex m-r5"
+                                            style="background-color: #df0000;  width: 100%">
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                            <!--                <input name="search" value="" type="text" class="form-control" placeholder="جستجو">-->
+                            <!--                            <span id="quik-search-remove"><i class="fa fa-remove"></i></span>-->
+                        </form>
+                        <div class="dez-quik-search-opacity w-100 h-100 bg-green"
+                             style="position: absolute;top: 0;z-index: -1">dafsdf
+                        </div>
+                    </div>
+{% endblock %}
+{% block content %}
+    <div class="page-content font-style-2">
+        <!-- Slider -->
+        <div class="main-slider style-two default-banner rev-slider-rtl" id="home">
+            <div class="tp-banner-container">
+                <div class="tp-banner " style="height: 680px; background-color: #1D1D1F">
+                    <div id="rev_slider_1175_1_wrapper" class="rev_slider_wrapper fullscreen-container"
+                         data-alias="duotone192" data-source="gallery"
+                         style="background-color:transparent;padding:0px;">
+
+                    </div>
+                    <!--                    <div class="container">-->
+                    <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner p-a25 m-auto">
+                            <div class="carousel-item active" style="text-align: center">
+                                <img src="{% static 'images/slider1.jpg' %}" alt="Los Angeles" style="max-width: 75%;height: 550px;">
+                                <div class="carousel-caption "
+                                     style="width: 25%; height: 65%;position: absolute;top: 17%; left: 4%">
+                                    <div class="h-25"></div>
+                                    <p class="text-uppercase font-weight-300 text-black" style="font-size: x-large; font-weight: bold">
+                                        تراورتن</p>
+                                    <p class="text-uppercase font-weight-500 "
+                                       style="font-size: xx-large;color: #0089df">سیلور سلماس</p>
+                                    <a href="special-offer.html"
+                                       class="site-button m-t40 m-l10 radius-no font-weight-300"
+                                       style="font-family: 'Vazir';background-color: #0089df;font-size: x-small;padding: 10px 40px 10px 40px;"> مشاهده
+                                        جزئیات </a>
+                                    <div class="w-100 h-100 "
+                                         style="position: absolute; top: 0%;z-index: -1;background-color: #e7e7e7; opacity: 68%;"></div>
+<!--                                    <img style="position: absolute;top: 0;left: 0" src="images/lable1.png">-->
+                                </div>
+                            </div>
+                            <div class="carousel-item " style="text-align: center">
+                                <img src="{% static 'images/slider2.jpg' %}" alt="Los Angeles" style="max-width: 75%;height: 550px;">
+                                <div class="carousel-caption "
+                                     style="width: 25%; height: 65%;position: absolute;top: 17%; left: 4%">
+                                    <div class="h-25"></div>
+                                    <p class="text-uppercase font-weight-300 text-black" style="font-size: x-large; font-weight: bold">
+                                        تراورتن</p>
+                                    <p class="text-uppercase font-weight-500 "
+                                       style="font-size: xx-large;color: #0089df">سیلور سلماس</p>
+                                    <a href="special-offer.html"
+                                       class="site-button m-t40 m-l10 radius-no font-weight-300"
+                                       style="font-family: 'Vazir';background-color: #0089df;font-size: x-small;padding: 10px 40px 10px 40px;"> مشاهده
+                                        جزئیات </a>
+                                    <div class="w-100 h-100 "
+                                         style="position: absolute; top: 0%;z-index: -1;background-color: #e7e7e7; opacity: 68%;"></div>
+<!--                                    <img style="position: absolute;top: 0;left: 0" src="images/lable1.png">-->
+                                </div>
+                            </div>
+                            <div class="carousel-item " style="text-align: center">
+                                <img src="{% static "images/slider1.jpg" %}" alt="Los Angeles" style="max-width: 75%;height: 550px;">
+                                <div class="carousel-caption "
+                                     style="width: 25%; height: 65%;position: absolute;top: 17%; left: 4%">
+                                    <div class="h-25"></div>
+                                    <p class="text-uppercase font-weight-300 text-black" style="font-size: x-large; font-weight: bold">
+                                        تراورتن</p>
+                                    <p class="text-uppercase font-weight-500 "
+                                       style="font-size: xx-large;color: #0089df">سیلور سلماس</p>
+                                    <a href="special-offer.html"
+                                       class="site-button m-t40 m-l10 radius-no font-weight-300"
+                                       style="font-family: 'Vazir';background-color: #0089df;font-size: x-small;padding: 10px 40px 10px 40px;"> مشاهده
+                                        جزئیات </a>
+                                    <div class="w-100 h-100 "
+                                         style="position: absolute; top: 0%;z-index: -1;background-color: #e7e7e7; opacity: 68%;"></div>
+<!--                                    <img style="position: absolute;top: 0;left: 0" src="images/lable1.png">-->
+                                </div>
+                            </div>
+                            <div class="carousel-item " style="text-align: center">
+                                <img src="{% static 'images/slider2.jpg' %}" alt="Los Angeles" style="max-width: 75%;height: 550px;">
+                                <div class="carousel-caption "
+                                     style="width: 25%; height: 65%;position: absolute;top: 17%; left: 4%">
+                                    <div class="h-25"></div>
+                                    <p class="text-uppercase font-weight-300 text-black" style="font-size: x-large; font-weight: bold">
+                                        تراورتن</p>
+                                    <p class="text-uppercase font-weight-500 "
+                                       style="font-size: xx-large;color: #0089df">سیلور سلماس</p>
+                                    <a href="special-offer.html"
+                                       class="site-button m-t40 m-l10 radius-no font-weight-300"
+                                       style="font-family: 'Vazir';background-color: #0089df;font-size: x-small;padding: 10px 40px 10px 40px;"> مشاهده
+                                        جزئیات </a>
+                                    <div class="w-100 h-100 "
+                                         style="position: absolute; top: 0%;z-index: -1;background-color: #e7e7e7; opacity: 68%;"></div>
+<!--                                    <img style="position: absolute;top: 0;left: 0" src="images/lable1.png">-->
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span><i class="fa fa-5x fa-angle-right"></i></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span><i class="fa fa-5x fa-angle-left"></i></span>
+                        </a>
+                    </div>
+                    <!--                    </div>-->
+                </div>
+            </div>
+        </div>
+        <!-- Slider END -->
+
+        <!-- Content area -->
+        <div class="section-full content-inner overlay-white-dark"
+             style="background-image:url('images/bgprofile3.jpg');margin-top: -80px; background-attachment:fixed">
+            <!-- special offer -->
+            <div class="container-fluid p-l90 p-r90">
+                <div class="section-head text-left" style="margin-right: 30px">
+                    <p class="text-uppercase font-weight-400 text-dark" style="font-size: x-large">پیشنهاد ویژه</p>
+                    <div class="clear"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="block-single.html"><img src="{% static "images/stone11.jpg" %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="block-single.html"><img src="{% static 'images/stone11.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="block-single.html"><img src="{% static 'images/stone11.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 m-b30 m-t50 text-center">
+                        <a href="special-offer.html" class="site-button m-t10 m-l10 radius-no more-btn-default">
+                            بیشتر </a>
+                    </div>
+                </div>
+            </div>
+            <!-- special offer END-->
+            <!-- export -->
+            <div class="container-fluid p-l90 p-r90">
+                <div class="section-head text-left" style="margin-right: 30px">
+                    <p class="text-uppercase font-weight-400 text-dark" style="font-size: x-large">صادراتی</p>
+                    <div class="clear"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="block-single.html"><img src="{% static 'images/stone11.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="block-single.html"><img src="{% static 'images/stone11.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="block-single.html"><img src="{% static 'images/stone11.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 m-b30 m-t50 text-center">
+                        <a href="export-block.html" class="site-button m-t10 m-l10 radius-no more-btn-default">
+                            بیشتر </a>
+                    </div>
+                </div>
+            </div>
+            <!-- export END-->
+            <!-- lined in the mine -->
+            <div class="container-fluid p-l90 p-r90">
+                <div class="section-head text-left" style="margin-right: 30px">
+                    <p class="text-uppercase font-weight-400 text-dark" style="font-size: x-large">لاین شده در معدن</p>
+
+                    <div class="clear"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="lined-single.html"><img src="{% static 'images/stone11.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="lined-single.html"><img src="{% static 'images/stone11.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-sm-12 m-b30">
+                        <div class="dez-box fly-box" style="margin: -10px;">
+                            <div class="dez-media"><a href="lined-single.html"><img src="{% static 'images/stone11.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="dez-info p-10 row text-center m-auto"
+                                 style="background-color: #1D1D1F">
+                                <div class="col-lg-6 text-left" style="margin-top: auto"><a href="javascript:void(0);"
+                                                                                            style="font-size: large"
+                                                                                            class="fa fa-share-alt text-white "></a>
+                                </div>
+                                <div class="col-lg-6 text-right" style="font-size: larger"><a class="text-white">درجه
+                                    بندی :</a><a class="font-weight-600 text-white"
+                                                 href="javascript:void(0);"> A</a>
+                                </div>
+                            </div>
+                            <div class="dez-info bg-white text-center m-auto row ">
+                                <div class="col-lg-12 font-weight-bold "><a href="javascript:void(0);"
+                                                                            style="color: #333;font-size: large">سیلور
+                                    سلماس </a></div>
+                            </div>
+
+                            <div class="dez-info p-a15 bg-white row m-auto ">
+
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r50" style="list-style-type:none">
+                                        <li>نوع سنگ</li>
+                                        <li>ابعاد</li>
+                                        <li>معدن</li>
+                                        <li>وزن تقریبی</li>
+                                        <li>موجود</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 ">
+                                    <ul class="product-box-ul font-weight-300 p-r40" style="list-style-type:none;">
+                                        <li>تراورتن</li>
+                                        <li>120*150*160</li>
+                                        <li>کرج-ایران</li>
+                                        <li>10 تن</li>
+                                        <li>120 تن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dez-info p-a0 bg-white row m-auto ">
+
+                                <div class="col-6"><a style="font-size: 9px" href="wish-list.html"
+                                                      class="site-button add-to-wish-list-btn text-white"
+                                ><i class="fa fa-heart-o text-warning" style="margin-left: 5px"></i>
+                                    به لیست علاقه مندی های من اضافه شود
+                                </a></div>
+                                <div class="col-6"><a class="site-button block-num-block-box bg-white text-secondry" style="font-size: 14px !important;"
+                                >بلوک
+                                    : #123456789aas</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 m-b30 m-t50 text-center">
+                        <a href="lined-in-mine.html" class="site-button m-t10 m-l10 radius-no more-btn-default">
+                            بیشتر </a>
+                    </div>
+                </div>
+            </div>
+            <!-- lined in the mine END-->
+        </div>
+        <!-- Content area END-->
+    </div>
+{% endblock %}
